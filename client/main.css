@@ -1,0 +1,42 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 25px;
+}
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 25px;
+	background: rgba(52, 73, 94, .5);
+}
+.footer a { color: #bbb; }
+.footer a:hover { color: #16a085; }
+
+/* Custom page CSS
+-------------------------------------------------- */
+
+body {
+	background: rgb(255, 239, 213);
+    background: rgba(255, 239, 213, .5);
+	background-image: url(/bg.png);
+	background-repeat: repeat;
+	padding-top: 75px;
+}
+@media (max-width: 979px) {
+	body {
+		padding-top: 0px;
+	}
+}
+.navbar-brand {
+	padding: 5px 40px 5px 0;
+}
+.navbar-brand > img {
+	height: 43px;
+}
