@@ -85,3 +85,32 @@ a { cursor: pointer; }
 .alignCent {
 	text-align: center;
 }
+
+.search {
+	color: white;
+	background: white;
+	position: relative;
+	border-radius: 25px;
+	width: 300px;
+	height: 45px;
+}
+.search:before {
+	position:absolute;
+	top: 3px;
+	left: 20px;
+	color: black;
+	font-family: FontAwesome;
+	font-size: 18px;
+	content: "\f002";
+}
+.search > input {
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	width: 240px;
+	color: black;
+	border: none;
+}
+.search > input:focus {
+    outline: 0;
+}
