@@ -22,6 +22,18 @@ Router.route('/', function () {
 	this.render('home');
 });
 
+Router.route('/scholars', function () {
+	this.render('scholars');
+});
+
+Router.route('/quotes', function () {
+	this.render('quotes');
+});
+
+Router.route('/tools', function () {
+	this.render('tools');
+});
+
 Router.route('/profile', function () {
 	if (Meteor.userId())
 		this.render('profile');

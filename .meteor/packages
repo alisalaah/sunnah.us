@@ -9,6 +9,12 @@ accounts-google
 accounts-facebook
 twbs:bootstrap
 ian:accounts-ui-bootstrap-3
-splendido:accounts-meld
+splendido:accounts-meld@1.3.0
 iron:router
 alanning:roles
+mizzao:user-status
+okgrow:analytics
+fortawesome:fontawesome
+mizzao:bootboxjs
+alisalaah:hijri-tools
+matb33:collection-hooks

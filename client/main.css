@@ -6,7 +6,7 @@ html {
 }
 body {
 	/* Margin bottom by footer height */
-	margin-bottom: 25px;
+	margin-bottom: 40px;
 }
 .footer {
 	position: absolute;
@@ -39,4 +39,49 @@ body {
 }
 .navbar-brand > img {
 	height: 43px;
+}
+
+a { cursor: pointer; }
+
+#scholarsTable_length { margin-top: 5px; }
+#scholarsTable_length > a { margin-left: 30px; }
+#scholarsTable_info { display: none; }
+#scholarsTable_paginate { display: none; }
+
+.era0 td {
+	background-color: rgba(0, 100, 0, .2);
+}
+.era1 td {
+	background-color: rgba(127, 255, 0, .2);
+}
+.era2 td {
+	background-color: rgba(102, 205, 170, .2);
+}
+.era3 td {
+	background-color: rgba(0, 191, 255, .2);
+}
+.era4 td {
+	background-color: rgba(160, 32, 240, .2);
+}
+.era5 td {
+	background-color: rgba(255, 165, 0, .2);
+}
+.era6 td {
+	background-color: rgba(255, 0, 0, .2);
+}
+
+.cred {
+	color: red;
+}
+.cgrn {
+	color: green;
+}
+.cblk {
+	color: black;
+}
+.alignLeft {
+	text-align: left;
+}
+.alignCent {
+	text-align: center;
 }
