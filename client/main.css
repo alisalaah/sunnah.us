@@ -114,3 +114,77 @@ a { cursor: pointer; }
 .search > input:focus {
     outline: 0;
 }
+
+#bioTitle {
+	border-bottom: 1px solid #666;
+}
+#bioTitle > a {
+	float: right;
+	font-size: .6em;
+	margin: 10px;
+}
+#bioTitle > input {
+	border-radius: 5px;
+	background: rgba(0, 0, 0, .1);
+}
+#bioTitle > input#name {
+	width: 45%;
+}
+#bioTitle > input#slug {
+	width: 25%;
+}
+
+#bioInfo {
+	float: right;
+	width: 50%;
+	min-height: 150px;
+	background: rgba(22, 160, 133, .1);
+	border: 1px dashed #999;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+#bioInfo2 {
+	min-height: 150px;
+	background: rgba(22, 160, 133, .1);
+	border: 1px dashed #999;
+	border-radius: 10px;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+#bioInfo2 strong {
+	width: 100px;
+	display: block;
+	float: left;
+}
+
+#bioInfo2 input {
+	border-radius: 5px;
+	background: rgba(0, 0, 0, .1);
+}
+
+#bioInfo2 small {
+	color: #666;
+}
+#bioInfo2 textarea {
+	width: 90%;
+	min-height: 60px;
+	border-radius: 5px;
+	border: 2px inset;
+	background: rgba(0, 0, 0, .1);
+}
+
+#bioArea {}
+
+#bioArea2 > textarea {
+	width: 100%;
+	min-height: 300px;
+	border-radius: 5px;
+	border: 2px inset;
+	background: rgba(0, 0, 0, .1);	
+}
+
+input.error { background: rgba(255, 0, 0, .2) !important; }
+input.warning { background: rgba(255, 255, 0, .2) !important; }
+input.success { background: rgba(0, 255, 0, .2) !important; }

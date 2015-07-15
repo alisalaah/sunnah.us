@@ -1,0 +1,25 @@
+<template name="scholarView">
+	<legend id="bioTitle">
+		<span id="name">{{name}}</span>
+		<a id="backBtn" href="/scholars">[Back to Scholars]</a>
+		<a id="editBio" href="/{{slug}}/edit">[Edit]</a>
+		{{#if isInRole 'admin,owner'}}
+		<a id="deleteBio" href="/{{slug}}/delete">[Delete]</a>
+		{{/if}}
+	</legend>
+	<div id="bioInfo">
+		<p class="col-md-6"><strong>Born:</strong> {{born}}h {{bornLoc}}</p>
+		<p class="col-md-6"><strong>Died:</strong> {{died}}h {{diedLoc}}</p>
+		{{#if parents}}{{/if}}
+		{{#if children}}{{/if}}
+		{{#if teachers}}{{/if}}
+		{{#if students}}{{/if}}
+	</div>
+	<div id="bioArea">
+		{{#if bio}}
+		{{bio}}
+		{{else}}
+		No biography yet...
+		{{/if}}
+	</div>
+</template>
