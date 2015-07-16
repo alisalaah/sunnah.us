@@ -1,0 +1,38 @@
+#bioInfo2 {
+	min-height: 150px;
+	background: rgba(22, 160, 133, .1);
+	border: 1px dashed #999;
+	border-radius: 10px;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+#bioInfo2 strong {
+	width: 100px;
+	display: block;
+	float: left;
+}
+
+#bioInfo2 input {
+	border-radius: 5px;
+	background: rgba(0, 0, 0, .1);
+}
+
+#bioInfo2 small {
+	color: #666;
+}
+#bioInfo2 textarea {
+	width: 90%;
+	min-height: 60px;
+	border-radius: 5px;
+	border: 2px inset;
+	background: rgba(0, 0, 0, .1);
+}
+
+#bioArea2 > textarea {
+	width: 100%;
+	min-height: 300px;
+	border-radius: 5px;
+	border: 2px inset;
+	background: rgba(0, 0, 0, .1);	
+}

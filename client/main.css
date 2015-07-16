@@ -43,58 +43,37 @@ body {
 
 a { cursor: pointer; }
 
-#scholarsTable_length { margin-top: 5px; }
-#scholarsTable_length > a { margin-left: 30px; }
-#scholarsTable_info { display: none; }
-#scholarsTable_paginate { display: none; }
-
-.era0 td {
-	background-color: rgba(0, 100, 0, .2);
-}
-.era1 td {
-	background-color: rgba(127, 255, 0, .2);
-}
-.era2 td {
-	background-color: rgba(102, 205, 170, .2);
-}
-.era3 td {
-	background-color: rgba(0, 191, 255, .2);
-}
-.era4 td {
-	background-color: rgba(160, 32, 240, .2);
-}
-.era5 td {
-	background-color: rgba(255, 165, 0, .2);
-}
-.era6 td {
-	background-color: rgba(255, 0, 0, .2);
-}
-
-.cred {
-	color: red;
-}
-.cgrn {
-	color: green;
-}
-.cblk {
-	color: black;
+.hide {
+	display: none;
 }
 .alignLeft {
 	text-align: left;
 }
-.alignCent {
+.alignRight {
+	text-align: right;
+}
+.alignCenter {
 	text-align: center;
 }
 
-.search {
+.dataTables_length {
+	height: 50px;
+	padding: 10px 0;
+	line-height: 30px;
+}
+.dataTables_length > a {
+	margin: 0 20px;
+}
+
+.dataTables_filter > label {
 	color: white;
 	background: white;
 	position: relative;
 	border-radius: 25px;
-	width: 300px;
+	width: 200px;
 	height: 45px;
 }
-.search:before {
+.dataTables_filter > label:before {
 	position:absolute;
 	top: 3px;
 	left: 20px;
@@ -103,86 +82,17 @@ a { cursor: pointer; }
 	font-size: 18px;
 	content: "\f002";
 }
-.search > input {
+.dataTables_filter > label > input {
 	position: absolute;
 	top: 5px;
 	right: 15px;
-	width: 240px;
+	width: 140px;
 	color: black;
 	border: none;
+	background: transparent;
 }
-.search > input:focus {
+.dataTables_filter > label > input:focus {
     outline: 0;
-}
-
-#bioTitle {
-	border-bottom: 1px solid #666;
-}
-#bioTitle > a {
-	float: right;
-	font-size: .6em;
-	margin: 10px;
-}
-#bioTitle > input {
-	border-radius: 5px;
-	background: rgba(0, 0, 0, .1);
-}
-#bioTitle > input#name {
-	width: 45%;
-}
-#bioTitle > input#slug {
-	width: 25%;
-}
-
-#bioInfo {
-	float: right;
-	width: 50%;
-	min-height: 150px;
-	background: rgba(22, 160, 133, .1);
-	border: 1px dashed #999;
-	border-radius: 10px;
-	padding: 5px;
-}
-
-#bioInfo2 {
-	min-height: 150px;
-	background: rgba(22, 160, 133, .1);
-	border: 1px dashed #999;
-	border-radius: 10px;
-	padding: 5px;
-	margin-bottom: 20px;
-}
-
-#bioInfo2 strong {
-	width: 100px;
-	display: block;
-	float: left;
-}
-
-#bioInfo2 input {
-	border-radius: 5px;
-	background: rgba(0, 0, 0, .1);
-}
-
-#bioInfo2 small {
-	color: #666;
-}
-#bioInfo2 textarea {
-	width: 90%;
-	min-height: 60px;
-	border-radius: 5px;
-	border: 2px inset;
-	background: rgba(0, 0, 0, .1);
-}
-
-#bioArea {}
-
-#bioArea2 > textarea {
-	width: 100%;
-	min-height: 300px;
-	border-radius: 5px;
-	border: 2px inset;
-	background: rgba(0, 0, 0, .1);	
 }
 
 input.error { background: rgba(255, 0, 0, .2) !important; }

@@ -1,31 +1,9 @@
 <template name="scholars">
-	<div class="row">
-		<table id="scholarsTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
-			<thead>
-				<tr>
-					<th style="display:none;">Era</th>
-					<th width="60%" class="alignLeft">Name</th>
-					<th width="20%" class="alignCent">Born</th>
-					<th width="20%" class="alignCent">Died</th>
-				</tr>
-			</thead>
-			<tbody>
-				{{#each allScholars}}
-				<tr class="era{{era}}">
-					<td style="display:none;">{{era}}</td>
-					<td class="alignLeft"><a href="/{{slug}}">{{name}}</a></td>
-					<td class="alignCent">{{born}}</td>
-					<td class="alignCent">{{died}}</td>					
-				</tr>
-				{{/each}}
-			</tbody>
-		</table>
-	</div>
+	{{> ReactiveDatatable tableData=tableData options=tableOptions }}
 </template>
 
 <template name="scholarsToolbar">
-	<div id="scholarsTable_length" class="dataTables_length" style="display:block;">
-		<a id="add" class="cgrn" href="/scholars/add"><i class="fa fa-plus-circle"></i> Add Scholar</a>
+	<div id="datatable_length" class="dataTables_length">
+		<a id="add" href="/scholars/add"><i class="fa fa-plus-circle"></i> Add Scholar</a>
 	</div>
 </template>
-
