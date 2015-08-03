@@ -7,17 +7,22 @@
 		<a id="deleteBio" href="/{{slug}}/delete">[Delete]</a>
 		{{/if}}
 	</legend>
-	<div id="bioInfo">
-		<p class="col-md-6"><strong>Born:</strong> {{born}}h {{bornLoc}}</p>
-		<p class="col-md-6"><strong>Died:</strong> {{died}}h {{diedLoc}}</p>
-		{{#if parents}}{{/if}}
-		{{#if children}}{{/if}}
-		{{#if teachers}}{{/if}}
-		{{#if students}}{{/if}}
-	</div>
-	<div id="bioArea">
+	<div id="toc"></div>
+	
+	<div class="col-sm-3"></div>
+	<div id="bioArea" class="col-sm-9">
+		
+		<div id="bioInfo">
+			<p class="col-md-6"><strong>Born:</strong> {{born}}h {{bornLoc}}</p>
+			<p class="col-md-6"><strong>Died:</strong> {{died}}h {{diedLoc}}</p>
+			{{#if parents}}{{/if}}
+			{{#if children}}{{/if}}
+			{{#if teachers}}{{/if}}
+			{{#if students}}{{/if}}
+		</div>
+		
 		{{#if bio}}
-		{{bio}}
+		{{#markdown}}{{bioText}}{{/markdown}}
 		{{else}}
 		No biography yet...
 		{{/if}}

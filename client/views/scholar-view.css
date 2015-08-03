@@ -18,13 +18,43 @@
 }
 
 #bioInfo {
-	float: right;
-	width: 50%;
 	min-height: 150px;
 	background: rgba(22, 160, 133, .1);
 	border: 1px dashed #999;
 	border-radius: 10px;
 	padding: 5px;
+	margin-bottom: 15px;
 }
 
 #bioArea {}
+#bioArea h1 {
+	font-size: 2.5em;
+	border-bottom: 1px solid #aaa;
+}
+#bioArea h2 {
+	font-size: 2em;
+}
+#bioArea h3 {
+	font-size: 1.5em;
+}
+#bioArea h4 {
+	font-size: 1.4em;
+}
+#bioArea h5 {
+	font-size: 1.3em;
+}
+#bioArea h6 {
+	font-size: 1.2em;
+}
+#bioArea p {
+	font-size: 1em;
+}
+
+
+#toc {
+	margin: 0
+}
+
+.tocify .active {
+	background: rgba(22, 160, 133, .1);	
+}

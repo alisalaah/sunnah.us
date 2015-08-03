@@ -4,11 +4,11 @@
 			<input id="name" name="name" type="text" value="{{name}}" placeholder="Full name" title="123">
 			<input id="slug" name="slug" type="text" value="{{slug}}" placeholder="Path slug">
 			<a id="save">[Save]</a>
-			<a id="cancel" href="{{#if slug}}/{{slug}}{{else}}/scholars{{/if}}">[Cancel]</a>
+			<a id="cancel" href="/{{slug}}">[Cancel]</a>
 		</legend>
 		<div id="bioInfo2">
-			<div class="row">
-				<p class="col-md-6">
+			<div class="row" style="margin-bottom: 10px;">
+				<div class="col-md-6">
 					<strong>Born:</strong>
 					<input id="born" name="born" type="text" value="{{born}}" placeholder="Hijri Year">
 					<input id="bornLoc" name="bornLoc" type="text" value="{{bornLoc}}" placeholder="City">
@@ -17,8 +17,8 @@
 					{{else}}
 					<input id="bornEst" name="bornEst" type="checkbox"> <small>(est)</small>
 					{{/if}}
-				</p>
-				<p class="col-md-6">
+				</div>
+				<div class="col-md-6">
 					<strong>Died:</strong>
 					<input id="died" name="died" type="text" value="{{died}}" placeholder="Hijri Year">
 					<input id="diedLoc" name="diedLoc" type="text" value="{{diedLoc}}" placeholder="City">
@@ -27,41 +27,67 @@
 					{{else}}
 					<input id="diedEst" name="diedEst" type="checkbox"> <small>(est)</small>
 					{{/if}}
-				</p>
+				</div>
 			</div>
-			<div class="alert alert-warning" role="alert" style="margin:0 10px 20px;padding:5px;"><b>Note: </b> Fields below this do not work yet...</div>
-			<div class="row">
-				<p class="col-md-6">
+			<div class="row" style="margin-bottom: 10px;">
+				<div class="col-md-6">
 					<strong>Parents:</strong>
-					<input id="father" name="father" type="text" value="{{father}}" placeholder="Father">
-					<input id="mother" name="mother" type="text" value="{{mother}}" placeholder="Mother">
-				</p>
-				<p class="col-md-6">
-					<strong>Unlisted:</strong>
-					<input id="unlisted" name="unlisted" type="checkbox"> <small>[Do not display on scholars list page]</small>
-				</p>
+					{{> inputAutocomplete id="father" name="father" value=father placeholder="Father..." settings=addFather nam=name slug=slug }}
+					{{> inputAutocomplete id="mother" name="mother" value=mother placeholder="Mother..." settings=addMother nam=name slug=slug }}
+				</div>
+				<div class="col-md-4">
+					<strong>Gender</strong>
+					{{#if isMale}}
+					<input type="radio" name="gender" id="gender-0" value="male" checked> Male
+					<input type="radio" name="gender" id="gender-1" value="female" style="margin-left:20px;"> Female
+					{{else}}
+					<input type="radio" name="gender" id="gender-0" value="male"> Male
+					<input type="radio" name="gender" id="gender-1" value="female" style="margin-left:20px;" checked> Female
+					{{/if}}
+				</div>
+				<div class="col-md-2">
+					<strong style="margin-left:11px;">Unlisted:</strong>
+					{{#if isUnlisted}}
+					<input id="unlisted" name="unlisted" type="checkbox" checked>
+					{{else}}
+					<input id="unlisted" name="unlisted" type="checkbox">
+					{{/if}}
+				</div>
 			</div>
 			<div class="row">
-				<p class="col-md-12">
+				<div class="col-md-12">
 					<strong>Teachers:</strong>
-					<textarea id="teachers" name="teachers" placeholder="Teacher names (must exist in scholars list).."></textarea>
-				</p>
+					{{> inputAutocomplete id="teacher" name="teacher" value=father placeholder="Teacher..." settings=addTeacher nam=name slug=slug }}
+					<div class="dataBox" id="teachers">
+						{{#each listTeachers}}
+						<p id="teacher-{{slug}}" class="teacherPill">{{name}} <i class="fa fa-times-circle"></i></p>
+						{{/each}}
+					</div>
+				</div>
 			</div>
+			<!-- TODO
 			<div class="row">
-				<p class="col-md-12">
+				<div class="col-md-12">
 					<strong>Places:</strong>
-					<textarea id="places" name="places" placeholder="Places the person lived, in order if known.."></textarea>
-				</p>
+					{{> inputAutocomplete id="place" name="place" value=father placeholder="City name..." settings=addPlace nam=name slug=slug }}
+					<p class="dataBox" id="places"></p>
+				</div>
 			</div>
 			<div class="row">
-				<p class="col-md-12">
+				<div class="col-md-12">
 					<strong>Tags:</strong>
-					<textarea id="tags" name="tags" placeholder="Tags.."></textarea>
-				</p>
+					{{> inputAutocomplete id="tag" name="tag" value=father placeholder="Tag..." settings=addTag nam=name slug=slug }}
+					<p class="dataBox" id="tags"></p>
+				</div>
 			</div>
+			-->
 		</div>
 		<div id="bioArea2">
 			<textarea id="bioText" name="bioText" placeholder="Biography using markdown..">{{bio}}</textarea>
 		</div>
 	</form>
+</template>
+
+<template name="autocompleteResult">
+    <span>{{name}}</span>
 </template>

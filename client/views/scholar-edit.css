@@ -28,6 +28,14 @@
 	border: 2px inset;
 	background: rgba(0, 0, 0, .1);
 }
+#bioInfo2 .dataBox {
+	float: right;
+	width: 815px;
+	margin-right: 13px;
+	min-height: 60px;
+	border-radius: 5px;
+	background: rgba(0, 0, 0, .05);
+}
 
 #bioArea2 > textarea {
 	width: 100%;
@@ -35,4 +43,37 @@
 	border-radius: 5px;
 	border: 2px inset;
 	background: rgba(0, 0, 0, .1);	
+}
+
+.-autocomplete-container {
+	width: 300px !important;
+}
+.-autocomplete-item > span {
+	color: #444 !important;	
+}
+.-autocomplete-item.selected > span {
+	color: #fff !important;	
+}
+
+.teacherPill {
+	font-size: 12px;
+	padding: 5px;
+	border-radius: 10px;
+	background: rgba(0, 255, 0, .2);
+	margin: 5px;
+	float: left;
+}
+.teacherPill > i {
+	cursor: pointer;
+}
+.teacherRed {
+	font-size: 12px;
+	padding: 5px;
+	border-radius: 10px;
+	background: rgba(255, 0, 0, .2);
+	margin: 5px;
+	float: left;
+}
+.teacherRed > i {
+	cursor: pointer;
 }

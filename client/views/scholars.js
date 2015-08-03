@@ -21,7 +21,7 @@ Template.scholars.helpers({
 				//render: renderBorn,
 				className: 'alignCenter'
 			}, {
-				title: 'Photo',
+				title: 'Died',
 				data: 'died',
 				//render: renderDied,
 				className: 'alignCenter'
@@ -35,6 +35,7 @@ Template.scholars.helpers({
 			$('#datatable').addClass('table-striped table-bordered');
 			$('.dataTables_filter > label > input').attr("placeholder", "Search").focus();
 			$('#datatable_filter').before(Blaze.toHTMLWithData(Template.scholarsToolbar));
+			$('#datatable_info').after(Blaze.toHTMLWithData(Template.scholarsLegend));
 		},
 		fnDrawCallback: function () {
 			$.each($('.scholarName'), function () {
